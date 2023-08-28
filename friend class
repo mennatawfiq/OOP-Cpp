@@ -1,0 +1,24 @@
+#include <iostream>
+
+using namespace std;
+
+class rect{
+    int x; int y;
+    public:
+        rect(int x, int y){
+            this->x = x; this->y = y;
+        }
+        friend class print;
+};
+
+class print{
+    public:
+    print(rect r){
+        cout << r.x << " " << r.y; 
+    }
+};
+
+int main(){ 
+    rect r(2, 3);
+    print p(r);
+}
