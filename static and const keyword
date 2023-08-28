@@ -1,0 +1,35 @@
+static variable: the program allocats that variable only once in the memory during the program life time so its value doesn't initialized again with every new object
+class student{
+    static int count; 
+    public:
+        student(){
+            count++;
+            cout << count << endl;
+        }
+};
+int student::count = 0;
+int main(){
+    student st1; // prints 1;
+    student st2; // prints 2;
+}
+
+static function: can be invoked using the class name
+class student{
+    int count; 
+    public:
+        student(){ count = 1; }
+        static void print(){ cout << count << endl; }
+};
+int main(){ student::print(); }
+------------------------------------------------------------------
+const variable: its value can't be changed
+const float pi = 3.14;
+
+***const object can only access const methods but non-const variable can access both const and non-const functions 
+class point{
+    int x, y;
+    public:
+        point(int x, int y){ this->x = x; this->y = y; }
+        void print() const{ cout << x << y << endl; }
+};
+int main(){ const point p(1,2); p.print(); }
