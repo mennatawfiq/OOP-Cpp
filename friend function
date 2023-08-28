@@ -1,0 +1,23 @@
+#include <iostream>
+
+using namespace std;
+
+class rect{
+    int x; int y;
+    friend double area(rect r); //can be put anywhere in the class 
+    public:
+        rect(int x, int y){
+            this->x = x; this->y = y;
+        }
+};
+
+double area(rect r){
+    return r.x * r.y;
+}
+
+int main(){ 
+
+    rect r1(2, 3);
+    cout << area(r1);
+    
+}
