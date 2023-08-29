@@ -1,0 +1,25 @@
+#include <iostream>
+using namespace std;
+
+template <typename t>
+class temp{
+    t x; t y;
+    public:
+        temp(t x, t y){
+            this->x = x;
+            this->y = y;
+        }
+        t max();
+};
+
+template <typename t>
+t temp<t>::max(){
+    return ( x > y ) ? x : y ;
+}
+
+int main(){ 
+    temp<int>t1(10, 12);
+    cout << t1.max() << endl; //12
+    temp<double>t2(10.5, 12.5);//12.5
+    cout << t2.max() << endl;
+}
