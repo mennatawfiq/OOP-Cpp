@@ -1,0 +1,35 @@
+#include <iostream>
+
+using namespace std;
+
+class boundaries{
+    int arr[50];
+    public:
+        boundaries(){
+            for(int i=0; i<50; i++){
+                arr[i] = i;
+            }
+        }
+        void printElement(int index){
+            if(index < 0) throw "error!";
+            else if(index > 50) throw 101;
+            else cout << "the element at index " << index << " is " << arr[index] << endl;
+        }
+};
+
+int main()
+{
+    boundaries b;
+    int y;
+    try{
+        cin >> y;
+        b.printElement(y);
+    }catch(const char* ex){
+        cout << ex << endl;
+    }catch(int exCode){
+        cout << "Exception number " << exCode << " happened!" << endl;
+    }catch(...){ // general handling
+        cout << " EXCEPTION" << endl;
+    }
+    return 0;
+}
