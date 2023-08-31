@@ -2,7 +2,7 @@
 
 using namespace std;
 
-//a friend function can't access an objcet's private attributes using this keyword
+//a friend function can't access an objcet's attributes using this keyword
 
 class rect{
     int x; int y;
