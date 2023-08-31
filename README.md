@@ -1,1 +1,1 @@
-some notes and tips
+some notes and tips for myself
