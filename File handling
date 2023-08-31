@@ -12,7 +12,7 @@ int main()
     {
         file << "Hello,\n";
         file << "This is Menna \n";
-        file << "somewhare in this world \n";
+        file << "somewhere in this world \n";
         file.close();
     }
     file.open("testing.txt", ios::app); // appending mode
