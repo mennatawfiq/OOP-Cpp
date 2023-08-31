@@ -2,6 +2,8 @@
 
 using namespace std;
 
+//a friend function can't access an objcet's private attributes using this keyword
+
 class rect{
     int x; int y;
     friend double area(rect r); //can be put anywhere in the class 
